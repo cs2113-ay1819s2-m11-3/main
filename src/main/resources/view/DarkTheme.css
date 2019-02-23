@@ -343,10 +343,58 @@
 }
 
 #tags .label {
-    -fx-text-fill: white;
-    -fx-background-color: #3e7b91;
     -fx-padding: 1 3 1 3;
     -fx-border-radius: 2;
     -fx-background-radius: 2;
     -fx-font-size: 11;
+}
+
+#tags .white {
+    -fx-text-fill: #000;
+    -fx-background-color: #fff;
+}
+
+#tags .black {
+    -fx-text-fill: #fff;
+    -fx-background-color: #000;
+}
+
+#tags .maroon {
+    -fx-text-fill: #fff;
+    -fx-background-color: #933d33;
+}
+
+#tags .orange {
+    -fx-text-fill: #000;
+    -fx-background-color: orange;
+}
+
+#tags .blue {
+    -fx-text-fill: #000;
+    -fx-background-color: #87CEFA;
+}
+
+#tags .pink {
+    -fx-text-fill: #000;
+    -fx-background-color: #FFB6C1;
+}
+
+#tags .purple {
+    -fx-text-fill: #fff;
+    -fx-background-color: #663399;
+}
+
+#tags .green {
+    -fx-text-fill: #000;
+    -fx-background-color: #66CDAA;
+}
+
+#tags .navy {
+    -fx-text-fill: #fff;
+    -fx-background-color: #000080;
+}
+
+#tags .beige {
+    -fx-text-fill: #000;
+    -fx-background-color: #FFE4C4;
 }
