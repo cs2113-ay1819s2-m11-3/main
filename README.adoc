@@ -33,5 +33,7 @@ endif::[]
 * Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by
 _Marco Jakob_.
 * Libraries used: https://github.com/TestFX/TestFX[TextFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]
+* NUS CS2113T Teaching Group: https://github.com/nusCS2113-AY1819S2/addressbook-level4[CS2113T]
+* Source Code Acknowledgements: https://github.com/se-edu/addressbook-level4[SE-EDU]
 
 == Licence : link:LICENSE[MIT]
