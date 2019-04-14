@@ -191,6 +191,7 @@ Returns any flashcards whose topic contains `sun` or `fox` such as "Brown fox" a
 The flashcard(s) whose topic matches any of the keywords given will be displayed in the list of flashcards.
 // end::find[]
 
+// tag::delete[]
 === Deleting a flashcard: `delete` or `d`
 
 Deletes the specified flashcard. +
