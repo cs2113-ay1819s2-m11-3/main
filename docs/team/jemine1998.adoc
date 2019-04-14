@@ -61,6 +61,8 @@ _{you can add/remove categories in the list above}_
 |===
 
 include::../UserGuide.adoc[tag=togglemode]
+include::../UserGuide.adoc[tag=selectsubject]
+include::../UserGuide.adoc[tag=find]
 
 
 

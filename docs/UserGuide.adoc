@@ -161,6 +161,7 @@ Next, enter `edit 1 t/Brown Fox diff/1` or `e 1 t/Brown Fox diff/1` to edit the 
 The edited flashcard will be updated and displayed in the flashcards panel.
 // end::edit[]
 
+// tag::find[]
 === Finding a flashcard based on topic: `find` or `f`
 
 Find flashcards based on the given keyword. +
@@ -188,7 +189,7 @@ Returns any flashcards whose topic contains `sun` or `fox` such as "Brown fox" a
 
 
 The flashcard(s) whose topic matches any of the keywords given will be displayed in the list of flashcards.
-// tag::delete[]
+// end::find[]
 
 === Deleting a flashcard: `delete` or `d`
 
@@ -223,7 +224,7 @@ The updated list of flashcards will be displayed in the flashcards panel.
 Deletes the specified subject. +
 Format: `deleteSubject SUBJECT` +
 
-* `SUBJECT`: Subject to be deleted. This subject name can be found in the displayed list of subjects on the left panel.
+* `SUBJECT`: Subject to be deleted. This subject name can be found in the displayed list of subjects on the left panel. +
 *Must be a subject that is already in the subject list* +
 
 *Examples:* +

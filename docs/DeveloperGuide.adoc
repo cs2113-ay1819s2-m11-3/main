@@ -488,7 +488,7 @@ image::SortCommandSD.png[width="800"]
 === Shelf-Life of FlashCards
 ==== Current Implementation
 
-The user can determine set a deadline for the flashcards and determine how long the flash cards will exist in the database “FlashCards”.
+The user can set a deadline for the flashcards and determine how long the flash cards will exist in the database “FlashCards”.
 The following operations are available:
 
 * `FlashCards#deadline()` or `FlashCards#note()` -- Adds a deadline/note for the specified flashcard.
@@ -568,7 +568,7 @@ This action is not reversible. The `undo` and `redo` command do not apply to the
 
 Alternative 1 is chosen to provide users with the choice of keeping and deleting flashcards as and when they want. Even though it will result in overloading of overdue flashcards
 and take up excess storage if the user does not manually delete, we designed the command in such a way that it accepts both dates and text. This provides two options for the users:
-He/She can choose to write a date or write a note under the flashcard, for example, `Clarify with the Teacher` or `Edit photosynthesis`. This will allow the user to have the freedom to write whatever they require rather than just deadlines.
+he/she can choose to assign a date or write a note under the flashcard, for example, `Clarify with the Teacher` or `Edit photosynthesis`. This will allow the user to have the freedom to write whatever they require rather than just deadlines.
 
 ===== Aspect: Data structure to support the deadline/note commands
 
@@ -576,11 +576,11 @@ He/She can choose to write a date or write a note under the flashcard, for examp
 ** Pros: Give the user the choice to keep or delete the flashcards. Also, the user can choose to delete the flashcards by subjects or delete all the flashcards altogether.
 ** Cons: Both `deleteSubject` and `clear` commands cannot be undone once implemented.
 * **Alternative 2:** Implement an internal calendar to calculate the number of days left and auto-deletion of flashcards after the deadline.
-** Pros: Auto deletion of flash cards.
-** Cons: Need to pay extra caution for Leap years. Users do not have the choice of keeping flashcards after the deadline.
+** Pros: Auto deletion of flash cards. Convenient for users as they do not have to keep track.
+** Cons: Need to pay extra caution for Leap years. Users also do not have the choice of keeping flashcards after the deadline.
 
 Alternative 1 is chosen to provide users with the choice of deleting flashcards as and when they want. Even though it will take up extra storage if the user does not manually delete,
-the user will have better control over what they want to store and delete in the application.
+the user will have better control over what they want to store or delete in the application.
 
 // end::shelflifeofflashcards[]
 
