@@ -485,6 +485,7 @@ image::SortCommandSD.png[width="800"]
 // end::quizzingbydifficulty[]
 
 // tag::shelflifeofflashcards[]
+
 === Shelf-Life of FlashCards
 ==== Current Implementation
 
@@ -1097,6 +1098,7 @@ See this https://github.com/se-edu/addressbook-level4/pull/599[PR] for the step-
 * Organize one's notes based on subjects
 * Help with the memorisation of notes through the use of flashcards (e.g. before exams)
 
+
 [appendix]
 == User Stories
 
@@ -1113,6 +1115,8 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |`* * *` |User |Edit a flashcard |Change my mistakes
 
 |`* * *` |User |Delete a flashcard through its index|Remove flashcards that I no longer need
+
+|`* * *` |User |List flashcards categorized by flashcards |Have an overview of the flashcards I currently have
 
 |`* * *` |User |View flashcards categorized by subjects |Have an overview of the flashcards I currently have for a particular subject
 
@@ -1154,9 +1158,9 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 |`* *` |User |Retrieve a recently deleted flashcard |Retrieve the flashcard which I might have accidentally deleted
 
-|`*` |User |Use an application that is not just monochromatic in colour |Have a better user experience
+|`*` |New User |Create a new account |Only see flashcards and flashcards that are customised by me
 
-|`*` |New User |Create a new account |Perform actions specific to the flashcards I created
+|`*` |User |Use an application that is not just monochromatic in colour |Have a better user experience
 
 |`*` |User |Login |Perform actions that only pertain to my account
 
@@ -1182,27 +1186,27 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 Use case ends.
 
 [discrete]
-=== Use Case: Editing a Flashcard
+=== Use case: Editing a Flashcard
 
 *MSS*
+1.  User enters the flashcard of the flashcard to be edited
+2.  FlashCards displays a list of flashcards belonging to the same flashcard
+3.  User selects the index of the flashcard to edit
+4.  FlashCards prompts for new data
+5. User enters new data
+6. FlashCards displays the updated flashcard
 
-1. User selects a subject
-2. FlashCards displays the list of flashcards for that subject.
-3. User enters the index and fields of the flashcard to be edited
-4. FlashCards displays the updated list of flashcards
-+
 Use case ends.
 
 [discrete]
-=== Use Case: Deleting a Flashcard
+=== Use case: Deleting a Flashcard
 
 *MSS*
 
-1. User selects a subject
-2. FlashCards displays the list of flashcards for that subject.
-3. User enters the index of the flashcard to be deleted
-4. FlashCards displays the updated list of flashcards
-+
+1.  User enters the flashcard of the flashcard to be deleted
+2.  FlashCards displays a list of flashcards belonging to the same flashcard
+3.  User selects the index of the flashcard to delete
+4.  FlashCards displays the updated list of flashcards
 Use case ends.
 
 [discrete]
@@ -1220,37 +1224,25 @@ Use case ends.
 
 *MSS*
 
-1.  User enters a keyword
-2.  FlashCards displays all flashcards that contains the given keyword
-+
-Use case ends.
-
-*Extensions*
-
-[none]
-* 1a. Keyword not found
+1. User selects a subject
+2. FlashCards displays a list of flashcards belonging to the same subject
+3. User enters a keyword
+4. FlashCards displays all flashcards that contains the given keyword
 +
 Use case ends.
 
 [discrete]
-=== Use Case: Selecting a Flashcard
+=== Use case: Selecting a Flashcard
 
 *MSS*
 
-1.  User selects a flashcard
-2.  FlashCards displays the topic and content in the Content panel.
-+
+1.  User enters the subject of the flashcard to be displayed
+2.  FlashCards displays a list of flashcards belonging to the same subject
+3.  User selects the index of the flashcard to view
+4. FlashCards displays the flashcard of the chosen index
+
 Use case ends.
 
-[discrete]
-=== Use Case: Viewing Flashcards Based on Subject
-
-*MSS*
-
-1.  User selects a subject
-2.  FlashCards displays the list of flashcards for that subject.
-+
-Use case ends.
 
 [discrete]
 === Use Case: Viewing the next Flashcard
@@ -1277,41 +1269,29 @@ Use case ends.
 4. FlashCards displays the flashcard of the chosen index
 5. User enters previous to view the flashcard with the previous index
 6. FlashCards displays the previous flashcard
-+
+
 Use case ends.
 
 [discrete]
-=== Use Case: Finding a Flashcard
+=== Use case: Listing all Flashcards categorized by Subjects
 
 *MSS*
 
-1. User selects a subject
-2. FlashCards displays a list of flashcards belonging to the same subject
-3. User enters a keyword
-4. FlashCards displays all flashcards that contains the given keyword
-+
+1. User enters the subject of the flashcards to be displayed
+2. FlashCards displays an indexed list of flashcards categorized by flashcards
+
 Use case ends.
 
-*Extensions*
-
-[none]
-* 3a. Keyword not found
-+
-Use case ends.
-
-
-[discrete]
 === Use Case: Sorting all Flashcards categorized by Difficulty
 
 *MSS*
 
 1. User enters the difficulty of the flashcards to be displayed
 2. FlashCards displays an indexed list of flashcards categorized by selected difficulty
-   +
 
 Use case ends.
 
-[discrete]
+
 === Use Case: Create Account (coming in v2.0)
 
 *MSS*
@@ -1333,10 +1313,8 @@ Use case resumes at step 1.
 === Use Case: Login (coming in v2.0)
 
 *MSS*
-
 1.  User enters username
 2.  FlashCards retrieves all relevant data for user account
-+
 Use case ends.
 
 *Extensions*

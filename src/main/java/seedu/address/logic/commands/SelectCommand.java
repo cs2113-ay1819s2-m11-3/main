@@ -41,8 +41,6 @@ public class SelectCommand extends Command {
         List<Flashcard> lastShownList = model.getFilteredFlashcardList();
         ObservableList<Flashcard> updatedFlashcardList = model.getUpdatedFlashcardList();
 
-
-
         if (model.getSelectedSubject() == null) {
             if (targetIndex.getZeroBased() >= lastShownList.size()) {
                 throw new CommandException(Messages.MESSAGE_INVALID_FLASHCARD_DISPLAYED_INDEX);

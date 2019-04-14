@@ -35,20 +35,21 @@ public class EditFlashcardDescriptorTest {
         assertFalse(DESC_ENGLISH.equals(DESC_CHINESE));
 
         // different topic -> returns false
-        EditCommand.EditFlashcardDescriptor editedAmy = new EditFlashcardDescriptorBuilder(DESC_ENGLISH)
+        EditCommand.EditFlashcardDescriptor editedEnglish = new EditFlashcardDescriptorBuilder(DESC_ENGLISH)
             .withTopic(VALID_TOPIC_CHINESE).build();
-        assertFalse(DESC_ENGLISH.equals(editedAmy));
+        assertFalse(DESC_ENGLISH.equals(editedEnglish));
 
         // different difficulty -> returns false
-        editedAmy = new EditFlashcardDescriptorBuilder(DESC_ENGLISH).withDifficulty(VALID_DIFFICULTY_CHINESE).build();
-        assertFalse(DESC_ENGLISH.equals(editedAmy));
+        editedEnglish = new EditFlashcardDescriptorBuilder(DESC_ENGLISH)
+                .withDifficulty(VALID_DIFFICULTY_CHINESE).build();
+        assertFalse(DESC_ENGLISH.equals(editedEnglish));
 
         // different content -> returns false
-        editedAmy = new EditFlashcardDescriptorBuilder(DESC_ENGLISH).withContent(VALID_CONTENT_CHINESE).build();
-        assertFalse(DESC_ENGLISH.equals(editedAmy));
+        editedEnglish = new EditFlashcardDescriptorBuilder(DESC_ENGLISH).withContent(VALID_CONTENT_CHINESE).build();
+        assertFalse(DESC_ENGLISH.equals(editedEnglish));
 
         // different tags -> returns false
-        editedAmy = new EditFlashcardDescriptorBuilder(DESC_ENGLISH).withTags(VALID_TAG_ENGLISH).build();
-        assertFalse(DESC_ENGLISH.equals(editedAmy));
+        editedEnglish = new EditFlashcardDescriptorBuilder(DESC_ENGLISH).withTags(VALID_TAG_ENGLISH).build();
+        assertFalse(DESC_ENGLISH.equals(editedEnglish));
     }
 }

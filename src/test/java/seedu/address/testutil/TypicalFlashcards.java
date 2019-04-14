@@ -63,14 +63,6 @@ public class TypicalFlashcards {
             .withTags("cs2113T")
             .build();
 
-    /*// Manually added - Flashcard's details found in {@code CommandTestUtil}
-    public static final Flashcard AMY =
-            new FlashcardBuilder().withTopic(VALID_TOPIC_AMY).withDifficulty(VALID_DIFFICULTY_AMY)
-            .withContent(VALID_CONTENT_AMY).withTags(VALID_TAG_FRIEND).build();
-    public static final Flashcard BOB =
-            new FlashcardBuilder().withTopic(VALID_TOPIC_BOB).withDifficulty(VALID_DIFFICULTY_BOB)
-            .withContent(VALID_CONTENT_BOB).withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND)
-            .build();*/
 
     public static final String KEYWORD_MATCHING_MEIER = "Meier"; // A keyword that matches MEIER
 

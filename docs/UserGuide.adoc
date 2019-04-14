@@ -161,7 +161,7 @@ Next, enter `edit 1 t/Brown Fox diff/1` or `e 1 t/Brown Fox diff/1` to edit the 
 The edited flashcard will be updated and displayed in the flashcards panel.
 // end::edit[]
 
-// tag::find[]
+// tag::findCommand[]
 === Finding a flashcard based on topic: `find` or `f`
 
 Find flashcards based on the given keyword. +
@@ -189,7 +189,8 @@ Returns any flashcards whose topic contains `sun` or `fox` such as "Brown fox" a
 
 
 The flashcard(s) whose topic matches any of the keywords given will be displayed in the list of flashcards.
-// end::find[]
+
+// end::findCommand[]
 
 // tag::delete[]
 === Deleting a flashcard: `delete` or `d`
@@ -247,9 +248,11 @@ Format: `selectSubject SUBJECT` +
 *Must be a subject that is already in the subject list* +
 
 *Steps to select a subject:* +
+
 * Enter the `selectSubject` command to select a subject;
 
 *Examples:* +
+
 * Enter this command `selectSubject English`, all flashcards that are tagged under "English" will be displayed in the flashcards panel.
 
 // end::selectsubject[]
@@ -342,6 +345,29 @@ Selects the previous flashcard in the list (i.e. the 4th flashcard); and display
 
 The previous flashcard in line will be selected and its content will be displayed.
 
+=== Selecting a flashcard: `sort DIFFICULTY`
+
+Displays list of flashcards under the chosen difficulty. +
+Format: `sort DIFFICULTY` +
+
+* `DIFFICULTY`: Difficulty level of the flashcard to be selected. This difficulty will be shown in the details of each flashcard.
+*Must be a positive integer* such as 1, 2, 3 only. +
+
+
+*Steps to select a flashcard:* +
+
+* Click on a subject in the subjects panel; or +
+* Enter the `selectSubject` command to select a subject (see Section 3.9.); then +
+* Use the `sort` command to filter the list of flashcards with selected difficulty level +
+
+
+*Examples:* +
+
+* After clicking on a subject e.g. Math, flashcards that are tagged under "Math" will be displayed in the flashcards panel. +
+Next, enter `select 2` to select the 2nd flashcard of the subject "Math" in the flashcards panel.
+
+* After entering this command `selectSubject English`, all flashcards that are tagged under "English" will be displayed in the flashcards panel. +
+Next, enter `select 1` to select the 1st flashcard of the subject "English" in the flashcards panel.
 // end::togglemode[]
 
 === Listing entered commands: `history`
@@ -423,3 +449,7 @@ e.g. `find Theorem` or `f sun fox`
 e.g.`select 2`
 * *Select Subject* : `selectSubject SUBJECT` +
 e.g. `selectSubject Math`
+* *Sort* : `sort DIFFICULTY` +
+e.g.`sort 2`
+
+
